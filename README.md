@@ -1,2 +1,2 @@
 # gLoginCount
-gLoginCount - A counter for players that join in your server of Minecraft
+gLoginCount é plugin contador de quantas vezes o jogador entrou em seu servidor de Minecraft

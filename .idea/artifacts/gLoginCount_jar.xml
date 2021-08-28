@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="gLoginCount:jar">
+    <output-path>$PROJECT_DIR$/../../../Servidores/Servidor 1.8.8/plugins</output-path>
+    <root id="archive" name="gLoginCount.jar">
+      <element id="module-output" name="gLoginCount" />
+    </root>
+  </artifact>
+</component>
