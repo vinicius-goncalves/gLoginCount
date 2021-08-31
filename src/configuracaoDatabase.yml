@@ -1,0 +1,11 @@
+#
+# gLoginCount - Version 1.0.0-BETA
+#
+# Information:
+# EN: Only configure this file if you know what you will do.
+# PT-BR: Configure esse arquivo apenas se você souber o que ira fazer.
+# PT-BR: O plugin ainda esta em desenvolvimento, configuracoes podem estar faltando/incompletas.
+
+#EN: Would you like to use MySQL or SQLite? True for MySQL or False por SQLite.
+#PT: Deseja usar MySQL ou SQLite? True para MySQL ou False para SQLite.
+usarMySQL: false

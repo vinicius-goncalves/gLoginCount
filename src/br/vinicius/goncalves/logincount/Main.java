@@ -1,21 +1,27 @@
 package br.vinicius.goncalves.logincount;
 
 import br.vinicius.goncalves.database.SQLConnection;
+import br.vinicius.goncalves.files.FileDatabaseUtils;
 import br.vinicius.goncalves.listeners.Events;
+import br.vinicius.goncalves.utils.RegisterUtils;
+import br.vinicius.goncalves.utils.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 
+    private final RegisterUtils registerUtils = new RegisterUtils();
     private SQLConnection sqLiteConnection = new SQLConnection();
+    private FileDatabaseUtils fileDatabaseUtils = new FileDatabaseUtils();
+
+    private final Utils utils = new Utils();
 
     @Override
     public void onEnable() {
 
-        saveDefaultConfig();
-        Bukkit.getConsoleSender().sendMessage("§aPlugin iniciado.");
-        sqLiteConnection.startConnectionWithSQLite();
+        registerUtils.forOnEnable();
         Bukkit.getPluginManager().registerEvents(new Events(), this);
+
 
     }
 
@@ -27,8 +33,7 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        Bukkit.getConsoleSender().sendMessage("§cPlugin desligado.");
-        sqLiteConnection.closeConnectionWithSQLite();
+        registerUtils.forOnDisable();
 
     }
 }

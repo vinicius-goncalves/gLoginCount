@@ -20,7 +20,7 @@ public class Events implements Listener {
             if(sqlUtils.containsPlayers(player)) {
                 sqlUtils.setCount(player, sqlUtils.getCount(player) + 1);
                 player.sendMessage("Você tem: " + sqlUtils.getCount(player));
-                
+
             }
         }
     }

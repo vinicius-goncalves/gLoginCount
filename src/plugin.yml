@@ -1,3 +1,6 @@
 name: gLoginCount
 main: br.vinicius.goncalves.logincount.Main
 version: 1.0.0-BETA-SpigotBuildTools
+commands:
+  logincount:
+    description: Use this command for see your stats of login on this server
