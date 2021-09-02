@@ -1,1 +1,13 @@
-#null
+#
+# gLoginCount - 1.0.0-BETA
+# Configuracao do plugin
+#
+# Variaveis
+#
+# %glogincount_player% - Retorna do banco de dados quantas vezes o player ja entrou no servidor
+# %glogincount_server% - Retorna o nome do servidor
+# %glogincount_playername% - Retorna o nome do player
+#
+
+#PT-BR: qual a mensagem deve aparecer para o jogador quando ele for olhar seu status?
+contadorLogin: "&aVoce %glogincount_player% ja entrou &f[%glogincount_player%]&a vezes no %glogincount_server%"

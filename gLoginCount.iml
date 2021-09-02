@@ -19,7 +19,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../APIs/spigot-api-1.8.8-R0.1-SNAPSHOT-BuildTools.jar!/" />
+          <root url="jar://$MODULE_DIR$/../APIs/sqlite-jdbc-3.36.0.2.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -28,10 +28,21 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../APIs/sqlite-jdbc-3.36.0.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../APIs/authlib-1.5.25.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../APIs/1.8.8 (by BuildTools)/spigot-1.8.8-R0.1-SNAPSHOT-Server-BuildTools.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../APIs/1.8.8 (by BuildTools)/spigot-1.8.8-R0.1-SNAPSHOT-Server-BuildTools.jar!/" />
+        </SOURCES>
       </library>
     </orderEntry>
   </component>

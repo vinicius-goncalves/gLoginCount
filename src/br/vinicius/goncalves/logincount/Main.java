@@ -1,3 +1,4 @@
+//This plugin is in development;
 package br.vinicius.goncalves.logincount;
 
 import br.vinicius.goncalves.database.SQLConnection;

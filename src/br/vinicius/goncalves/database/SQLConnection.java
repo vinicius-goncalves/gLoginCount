@@ -1,7 +1,6 @@
 package br.vinicius.goncalves.database;
 
 import br.vinicius.goncalves.files.FileDatabaseUtils;
-import br.vinicius.goncalves.logincount.Main;
 import br.vinicius.goncalves.utils.Utils;
 
 import java.io.File;
