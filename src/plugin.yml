@@ -4,3 +4,5 @@ version: 1.0.0-BETA-SpigotBuildTools
 commands:
   logincount:
     description: Use this command for see your stats of login on this server
+  glogincount:
+    description: Use this command for OP administration

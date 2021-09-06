@@ -1,7 +1,6 @@
 package br.vinicius.goncalves.commands;
 
 import br.vinicius.goncalves.inventory.InventoryUtils;
-import br.vinicius.goncalves.utils.ReflectionUtils;
 import br.vinicius.goncalves.utils.Utils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

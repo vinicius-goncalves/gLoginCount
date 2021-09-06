@@ -53,7 +53,7 @@ public class Utils {
     public ItemStack setSkull(String nameHead, String displayName, String[] lore) {
         ItemStack itemStack = headsUtils.getNameHead(nameHead);
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName("§a"+displayName);
+        itemMeta.setDisplayName(displayName.replace('&', '§'));
         itemMeta.setLore(Arrays.asList(lore));
         itemStack.setItemMeta(itemMeta);
         return itemStack;

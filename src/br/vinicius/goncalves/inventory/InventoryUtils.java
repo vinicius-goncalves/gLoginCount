@@ -19,7 +19,7 @@ public class InventoryUtils {
     }
 
     public void setItemsOnInventory(Inventory inventoryToSet, Player player) {
-        inventoryToSet.setItem(13, utils.setSkull("black_number_nine", "Login Count", new String[] {messagesConfig.contadorLogin(player)}));
+        inventoryToSet.setItem(13, utils.setSkull("black_number_nine", "&aContador de Login", new String[] {messagesConfig.contadorLogin(player)}));
 
     }
 }

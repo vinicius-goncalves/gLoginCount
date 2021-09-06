@@ -1,5 +1,6 @@
 package br.vinicius.goncalves.utils;
 
+import br.vinicius.goncalves.commands.CommandOP;
 import br.vinicius.goncalves.commands.CommandPlayer;
 import br.vinicius.goncalves.database.SQLConnection;
 import br.vinicius.goncalves.files.FileDatabaseUtils;
@@ -19,6 +20,7 @@ public class RegisterUtils {
 
     private void registerCommands() {
         setCommand("loginCount", new CommandPlayer());
+        setCommand("glogincount", new CommandOP());
 
     }
 

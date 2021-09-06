@@ -8,6 +8,8 @@
 # %glogincount_server% - Retorna o nome do servidor
 # %glogincount_playername% - Retorna o nome do player
 #
+# Para recarregar as configuracoes, utilize "/glogincount" in-game (apenas administradores, com permissao ou op)
+# Permissao /glogincount -> glogincount.use
 
 #PT-BR: qual a mensagem deve aparecer para o jogador quando ele for olhar seu status?
-contadorLogin: "&aVoce %glogincount_player% ja entrou &f[%glogincount_player%]&a vezes no %glogincount_server%"
+contadorLogin: "&aVoce entrou &f[%glogincount_player%]&a vezes no &f[%glogincount_server%]"
