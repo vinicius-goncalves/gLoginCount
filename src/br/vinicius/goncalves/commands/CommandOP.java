@@ -12,14 +12,14 @@ public class CommandOP implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String label, String[] args) {
-        if(!(commandSender instanceof Player)) {
+        if (!(commandSender instanceof Player)) {
             commandSender.sendMessage("Apenas para jogadores in-game.");
             return false;
 
         }
 
-        Player player = (Player)commandSender;
-        if(!player.hasPermission("glogincount.use") || !player.isOp()) {
+        Player player = (Player) commandSender;
+        if (!player.hasPermission("glogincount.use") || !player.isOp()) {
             player.sendMessage("&cEssa comando é apenas para administradores.");
             return true;
 

@@ -4,6 +4,7 @@ package br.vinicius.goncalves.logincount;
 import br.vinicius.goncalves.database.SQLConnection;
 import br.vinicius.goncalves.files.FileDatabaseUtils;
 import br.vinicius.goncalves.listeners.Events;
+import br.vinicius.goncalves.listeners.EventsDatabase;
 import br.vinicius.goncalves.utils.RegisterUtils;
 import br.vinicius.goncalves.utils.Utils;
 import org.bukkit.Bukkit;
@@ -22,6 +23,7 @@ public class Main extends JavaPlugin {
 
         registerUtils.forOnEnable();
         Bukkit.getPluginManager().registerEvents(new Events(), this);
+        Bukkit.getPluginManager().registerEvents(new EventsDatabase(), this);
 
 
     }

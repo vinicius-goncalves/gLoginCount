@@ -29,11 +29,16 @@ public class ReflectionUtils {
             Object titleObject = getNMSClass("PacketPlayOutTitle").getDeclaredClasses()[0].getField("TITLE").get(null);
             Object titleChat = getNMSClass("IChatBaseComponent").getDeclaredClasses()[0].getMethod("a", String.class).invoke(null, "{\"text\":\""+title+"\"}");
 
+            Object subtitleObject = getNMSClass("PacketPlayOutTitle").getDeclaredClasses()[0].getField("SUBTITLE").get(null);
+            Object subtitleChat = getNMSClass("IChatBaseComponent").getDeclaredClasses()[0].getMethod("a", String.class).invoke(null, "{\"text\":\""+String.class+"\"}");
+
             Constructor<?> constructor = getNMSClass("PacketPlayOutTitle").getConstructor(getNMSClass("PacketPlayOutTitle").getDeclaredClasses()[0], getNMSClass("IChatBaseComponent"), int.class, int.class, int.class);
 
             Object titlePacket = constructor.newInstance(titleObject, titleChat, fadeIn, stay, fadeOut);
+            Object subtitlePacket = constructor.newInstance(subtitleObject, subtitleChat, fadeIn, stay, fadeOut);
 
             sendPacket(player, titlePacket);
+            sendPacket(player, subtitlePacket);
 
         }catch(Exception e) {
             e.printStackTrace();
@@ -42,8 +47,9 @@ public class ReflectionUtils {
 
     public void sendActionbar(Player player, String message) {
         try {
-            Object actionbarChat = getNMSClass("IChatBaseComponent").getDeclaredClasses()[0].getMethod("a", String.class).invoke(null, "{\"text\":\""+message+"\"}");
             Constructor<?> constructor = getNMSClass("PacketPlayOutChat").getConstructor(getNMSClass("IChatBaseComponent"), byte.class);
+
+            Object actionbarChat = getNMSClass("IChatBaseComponent").getDeclaredClasses()[0].getMethod("a", String.class).invoke(null, "{\"text\":\""+message+"\"}");
             Object actionbarPacket = constructor.newInstance(actionbarChat, (byte) 2);
 
             sendPacket(player, actionbarPacket);
@@ -51,5 +57,4 @@ public class ReflectionUtils {
             e.printStackTrace();
         }
     }
-
 }

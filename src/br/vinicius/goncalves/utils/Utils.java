@@ -1,18 +1,22 @@
 package br.vinicius.goncalves.utils;
 
+import br.vinicius.goncalves.logincount.Main;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class Utils {
 
     private HeadsUtils headsUtils = new HeadsUtils();
+    private ReflectionUtils reflectionUtils = new ReflectionUtils();
 
     /*
     Many methods
@@ -22,7 +26,7 @@ public class Utils {
     }
 
     public String translateBoolean(boolean booleanValue) {
-        return booleanValue?"Sim":"Nao";
+        return booleanValue ? "Sim" : "Nao";
 
     }
 
@@ -60,14 +64,34 @@ public class Utils {
 
     }
 
+    public void sendAlert(Player player, List<?> objectList) {
+        new BukkitRunnable() {
+
+            @Override
+            public void run() {
+                try {
+                    if (objectList.contains(player.getName())) {
+                        reflectionUtils.sendActionbar(player, withColor("&eVocê está no modo de edição &a[Setar]"));
+                    }
+                    if (!objectList.contains(player.getName())) {
+                        this.cancel();
+                    }
+                } catch(Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }.runTaskTimer(Main.getPlugin(Main.class), 4L, 4L);
+    }
+
     /*
     Others
      */
     public String randomString(int sizeString, String stringToRandom) {
         StringBuilder stringBuilder = new StringBuilder();
-        for(int i = 0; i < sizeString; i++) {
+        for (int i = 0; i < sizeString; i++) {
             stringBuilder.append(stringToRandom.charAt(new Random().nextInt(sizeString)));
         }
         return stringBuilder.toString();
     }
+
 }
